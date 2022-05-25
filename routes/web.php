@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\WebController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,34 +13,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/landingpage', function () {
-    return view('landingpage');
-});
-
-Route::get('/Auth/register', function () {
-    return view('Auth.register');
-});
-
 Route::get('/', function () {
-    return view('index');
-});
+    return view('landingpage');
+})->name('landing_page');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-});
-
-Route::get('/KesehatanMahasiswa', function () {
-    return view('KesehatanMahasiswa');
-});
-
-Route::get('/KeterlambatanTA', function () {
-    return view('KeterlambatanTA');
-});
-
-Route::get('/MasalahRegistrasi', function () {
-    return view('PermasalahanRegistrasi');
-});
-
-Route::get('/KeaktifanMahasiswa', function () {
-    return view('KeaktifanMahasiswa');
-});
+Route::get('/dashboard', [WebController::class, 'home'])->name('dashboard');
+Route::get('/KesehatanMahasiswa', [WebController::class, 'kesehatan'])->name('Kesehatan_Mahasiswa');
+Route::get('/KeaktifanMahasiswa', [WebController::class, 'keaktifan'])->name('Keaktifan_Mahasiswa');
+Route::get('/KeterlambatanTA', [WebController::class, 'kelulusan'])->name('Keterlambatan_Mahasiswa');
+Route::get('/MasalahRegistrasi', [WebController::class, 'registrasi'])->name('Masalah_Registrasi');

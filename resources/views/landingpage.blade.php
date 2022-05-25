@@ -8,9 +8,7 @@
     <meta name="author" content="" />
     <title>New Age - Start Bootstrap Theme</title>
     <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-    <!-- Bootstrap icons-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
-    <!-- Google fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,wght@0,600;1,600&amp;display=swap"
         rel="stylesheet" />
@@ -20,7 +18,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,400;1,400&amp;display=swap"
         rel="stylesheet" />
     <script src="https://kit.fontawesome.com/80c8f3f2ea.js" crossorigin="anonymous"></script>
-    <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
 </head>
 
@@ -55,7 +52,7 @@
                         <div class="d-flex flex-column flex-lg-row align-items-center">
 
                             <a class="btn text-white text-center explore-more-button" style="background-color:#27AE60"
-                                href="/blogs">Explore More >
+                                href="{{ route('dashboard') }}">Explore More >
                                 <a href="#!"></a>
                         </div>
                     </div>
